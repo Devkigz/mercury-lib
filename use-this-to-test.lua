@@ -10,38 +10,15 @@ local tab = gui:tab{
 }
 
 tab:button({
-    Name = "show prompt",
+newTab:button({
+    Name = "the main gui",
     Callback = function()
-        tab:prompt{
-            Title = "baby",
-            Text = "shark doo doo doo doo im blank lmao",
-            Buttons = {
-                Ok = function()
-                    tab:prompt{
-                        Followup = true,
-                        Title = "really?",
-                        Text = "you sure?=",
-                        Buttons = {
-                            Yes = function()
-                                tab:prompt{
-                                    Followup = true,
-                                    Title = "xd",
-                                    Text = "sus",
-                                    Buttons = {
-                                        balls = function()
-                                            gui:set_status("github")
-                                        end,
-                                        anal = function()
-                                            gui:set_Status("money")
-                                        end
-                                    }
-                                }
-                            end,
-                        }
-                    }
-                end,
-            }
-        }
+        -- Your button's logic script goes here
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Devkigz/v5/main/v5hub",true))();
+        -- Add any functionality you want for the button
+    }
+})
+        
     end,
 })
 tab:keybind({Callback = function()

@@ -4,6 +4,7 @@ local gui = Library:create{
     Theme = Library.Themes.Serika
 }
 
+-- Existing "Aimbot" tab and its button
 local tab = gui:tab{
     Icon = "rbxassetid://6034996695",
     Name = "Aimbot"
@@ -32,7 +33,7 @@ tab:button({
                                             gui:set_status("github")
                                         end,
                                         anal = function()
-                                            gui:set_Status("money")
+                                            gui:set_status("money")
                                         end
                                     }
                                 }
@@ -65,7 +66,7 @@ tab:dropdown({
         {"Two", 2},
         {"Three", 3}
     },
-    Description = "amongu s",
+    Description = "amongus",
     Callback = function(v)
         print(v, "clicked")
     end,
@@ -85,4 +86,20 @@ tab:color_picker({
     Callback = function(color)
         print(color)
     end,
+})
+
+-- Create a new tab
+local newTab = gui:tab{
+    Icon = "rbxassetid://your_icon_id_here",
+    Name = "#MAN TAB"
+}
+
+-- Add a button to the new tab with your logic script
+newTab:button({
+    Name = "MAIN GUY",
+    Callback = function()
+        -- Your button's logic script goes here
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Devkigz/v5/main/v5hub",true))(); 
+        -- Add any functionality you want for the button
+    }
 })
